@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mukul Goel - Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -13,21 +15,36 @@
       color: #333;
       line-height: 1.6;
     }
-    header {
+    .hero {
       background: linear-gradient(90deg, #6a11cb, #2575fc);
       color: white;
       text-align: center;
-      padding: 3em 1em;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      padding: 5em 1em;
+      position: relative;
     }
-    header h1 {
+    .hero h1 {
+      font-size: 3.5em;
       margin: 0;
-      font-size: 3em;
-      font-weight: bold;
+      animation: fadeInDown 2s ease;
     }
-    header p {
+    .hero p {
       font-size: 1.5em;
       margin-top: 0.5em;
+      animation: fadeInUp 2s ease;
+    }
+    .hero a {
+      display: inline-block;
+      margin: 1em 0.5em;
+      padding: 0.8em 2em;
+      background-color: #ff6f61;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      animation: fadeIn 2.5s ease;
+    }
+    .hero a:hover {
+      background-color: #e05550;
     }
     section {
       max-width: 1100px;
@@ -44,37 +61,59 @@
       border-bottom: 2px solid #6a11cb;
       padding-bottom: 0.5em;
     }
-    section h3 {
-      color: #2575fc;
-      margin-top: 1.5em;
-      font-size: 1.5em;
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+      margin-top: 2em;
     }
-    p, ul {
-      margin-top: 1em;
+    footer p {
+      margin: 0.5em 0;
     }
-    ul {
-      list-style-type: disc;
-      margin-left: 2em;
-    }
-    ul li {
-      margin-bottom: 0.8em;
-    }
-    a {
-      color: #6a11cb;
+    footer a {
+      color: #ff6f61;
       text-decoration: none;
-      font-weight: bold;
     }
-    a:hover {
+    footer a:hover {
       text-decoration: underline;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
     @media (max-width: 768px) {
       body {
         padding: 1em;
       }
-      header h1 {
+      .hero h1 {
         font-size: 2.5em;
       }
-      header p {
+      .hero p {
         font-size: 1.2em;
       }
       section {
@@ -84,11 +123,14 @@
   </style>
 </head>
 <body>
-  <header>
+  <div class="hero">
     <h1>Mukul Goel</h1>
-    <p>Mobile Application Developer | Flutter Expert</p>
-  </header>
-  <section>
+    <p>Innovative Mobile Application Developer</p>
+    <a href="#projects">View Projects</a>
+    <a href="Mukul_Goel_Resume.pdf" target="_blank">Download Resume</a>
+  </div>
+
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
       I am a passionate Mobile Application Developer with over 3 years of experience in building robust and user-friendly
@@ -97,7 +139,8 @@
       high standards of quality and security.
     </p>
   </section>
-  <section>
+
+  <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <ul>
       <li>Proficient in Flutter development for cross-platform mobile applications.</li>
@@ -108,7 +151,8 @@
       <li>Knowledge of blockchain technologies and decentralized application (dApp) development.</li>
     </ul>
   </section>
-  <section>
+
+  <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <h3>Taxi Guru</h3>
     <p>A taxi booking application with separate user and driver apps, enabling ride requests, real-time tracking, and payment options.</p>
@@ -145,18 +189,22 @@
       <li>Collaborated with backend teams to ensure seamless API integration and scalability.</li>
     </ul>
   </section>
-  <section>
+
+  <section id="education" data-aos="fade-up">
     <h2>Education</h2>
     <ul>
       <li>Master of Computer Applications: Information Technology - ITM University, Gwalior (2018 - 2021)</li>
       <li>Bachelor of Computer Applications: Information Technology - Makhanlal Chaturvedi University, Bhopal (2015 - 2018)</li>
     </ul>
   </section>
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mukulgoelabc@gmail.com">mukulgoelabc@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mukul--goel/" target="_blank">View Profile</a></p>
-    <p>Download Resume: <a href="Mukul_Goel_Resume.pdf" target="_blank">Resume</a></p>
-  </section>
+
+  <footer>
+    <p>&copy; 2025 Mukul Goel. All Rights Reserved.</p>
+    <p>Find me on: <a href="https://www.linkedin.com/in/mukul--goel/" target="_blank">LinkedIn</a> | <a href="https://github.com/mukulgoel" target="_blank">GitHub</a></p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
