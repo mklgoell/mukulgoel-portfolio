@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ExternalLink, Globe } from 'lucide-react';
 
 const projects = [
@@ -88,13 +89,20 @@ export default function Projects() {
                             <div className={`aspect-video rounded-3xl ${project.color} overflow-hidden mb-8 border border-slate-800 group-hover:border-accent/30 transition-all duration-500 relative`}>
                                 <div className="absolute inset-0 overflow-hidden">
                                     <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                    <motion.img
-                                        src={project.image}
-                                        alt={`${project.title} project interface preview`}
+                                    <motion.div
                                         whileHover={{ scale: 1.1, x: 10, y: 5 }}
                                         transition={{ duration: 0.8 }}
-                                        className="w-full h-full object-cover"
-                                    />
+                                        className="w-full h-full"
+                                    >
+                                        <Image
+                                            src={project.image}
+                                            alt={`${project.title} project interface preview`}
+                                            fill
+                                            className="object-cover"
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            priority={i === 0}
+                                        />
+                                    </motion.div>
                                 </div>
                             </div>
 

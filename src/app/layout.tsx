@@ -45,10 +45,10 @@ export const metadata: Metadata = {
     siteName: "Mukul Goel Portfolio",
     images: [
       {
-        url: "/icon.svg", // Use a better OG image if available
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Mukul Goel Portfolio",
+        alt: "Mukul Goel | Bespoke Digital Engineering",
       },
     ],
     locale: "en_US",
@@ -58,13 +58,19 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mukul Goel | Full-Stack & Mobile Engineer",
     description: "Bespoke digital experiences crafted with precision and speed.",
-    creator: "@mklgoell", // Update if you have one
-    images: ["/icon.svg"],
+    creator: "@mklgoell",
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",
     shortcut: "/icon.svg",
+  },
+  themeColor: "#020617",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Mukul Goel",
   },
   alternates: {
     canonical: "/",
