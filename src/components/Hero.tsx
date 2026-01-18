@@ -72,7 +72,7 @@ const Hero = () => {
                                     <span className="text-accent text-[10px] font-bold uppercase tracking-widest leading-none">Senior Engineering</span>
                                 </motion.div>
                                 <h1
-                                    className="text-7xl md:text-9xl font-serif text-white tracking-tight leading-[0.85]"
+                                    className="text-6xl md:text-9xl font-serif text-white tracking-tight leading-[0.85]"
                                 >
                                     <span className="block overflow-hidden pb-4">
                                         {"Mukul".split("").map((char, i) => (

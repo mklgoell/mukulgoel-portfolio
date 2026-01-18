@@ -15,15 +15,17 @@
   --font-sans: var(--font-outfit);
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-outfit), sans-serif;
-  overflow-x: hidden;
 }
 
 h1,
@@ -100,14 +102,13 @@ blockquote {
 
 .noise-overlay {
   position: fixed;
-  inset: -200%;
-  width: 400%;
-  height: 400%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
   opacity: 0.05;
   pointer-events: none;
   z-index: 9999;
-  animation: noise-anim 0.2s infinite steps(1);
 }
 
 .magnetic-wrap {
