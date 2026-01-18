@@ -3,6 +3,7 @@ import { Playfair_Display, Outfit } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import Scanline from "@/components/Scanline";
+import StructuredData from "@/components/StructuredData";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -16,11 +17,57 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Mukul Goel | Full-Stack & Mobile Engineer",
-  description: "Bespoke digital experiences crafted with precision and speed.",
+  metadataBase: new URL("https://mukulgoel.dev"),
+  title: {
+    default: "Mukul Goel | Full-Stack & Mobile Engineer",
+    template: "%s | Mukul Goel"
+  },
+  description: "Bespoke digital experiences crafted with precision and speed. Specializing in Next.js, Flutter, and high-impact fintech solutions.",
+  keywords: ["Mukul Goel", "Full-Stack Engineer", "Mobile Architect", "Flutter Developer", "Next.js Expert", "Goa Software Engineer", "Fintech Developer", "Web3 Architect"],
+  authors: [{ name: "Mukul Goel", url: "https://github.com/mklgoell" }],
+  creator: "Mukul Goel",
+  publisher: "Mukul Goel",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: "Mukul Goel | Full-Stack & Mobile Engineer",
+    description: "Bespoke digital experiences crafted with precision and speed.",
+    url: "https://mukulgoel.dev",
+    siteName: "Mukul Goel Portfolio",
+    images: [
+      {
+        url: "/icon.svg", // Use a better OG image if available
+        width: 1200,
+        height: 630,
+        alt: "Mukul Goel Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mukul Goel | Full-Stack & Mobile Engineer",
+    description: "Bespoke digital experiences crafted with precision and speed.",
+    creator: "@mklgoell", // Update if you have one
+    images: ["/icon.svg"],
+  },
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
@@ -34,6 +81,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${outfit.variable} font-sans bg-[#020617] text-[#f8fafc] antialiased relative`}
       >
+        <StructuredData />
         <CustomCursor />
         <BackgroundEffect />
         <Scanline />

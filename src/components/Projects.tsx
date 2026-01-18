@@ -8,7 +8,7 @@ const projects = [
         title: "Moviq",
         description: "Automated payment recovery for the Indian SMB ecosystem. Transforming late fees into healthy cash flow through intelligent WhatsApp & Email orchestration and UPI deep-linking.",
         tags: ["SaaS", "UPI Integration", "WhatsApp API", "Automation"],
-        links: [],
+        links: [{ name: "Live Site", url: "https://moviq.in" }],
         image: "/moviq.png",
         color: "bg-orange-500/10",
         text: "text-orange-400",
@@ -60,7 +60,7 @@ export default function Projects() {
 
                 <div className="grid lg:grid-cols-2 gap-y-32 gap-x-16">
                     {projects.map((project, i) => (
-                        <motion.div
+                        <motion.article
                             key={project.title}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function Projects() {
                         >
                             {/* Technical Tooltip */}
                             <div className="absolute -top-20 right-0 z-30 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 pointer-events-none">
-                                <div className="bg-slate-900/90 backdrop-blur-md border border-accent/20 p-3 rounded-lg shadow-2xl font-mono text-[9px] uppercase tracking-wider space-y-1">
+                                <div className="bg-slate-900/90 backdrop-blur-md border border-accent/20 p-3 rounded-lg shadow-2xl font-mono text-[9px] uppercase tracking-wider space-y-1" role="tooltip">
                                     {Object.entries(project.meta).map(([key, value]) => (
                                         <div key={key} className="flex justify-between gap-4">
                                             <span className="text-slate-500">{key}:</span>
@@ -81,7 +81,7 @@ export default function Projects() {
                                 </div>
                             </div>
 
-                            <div className="absolute -top-12 -left-4 text-7xl font-serif text-slate-800/20 group-hover:text-accent/20 transition-colors duration-500">
+                            <div className="absolute -top-12 -left-4 text-7xl font-serif text-slate-800/20 group-hover:text-accent/20 transition-colors duration-500" aria-hidden="true">
                                 0{i + 1}
                             </div>
 
@@ -90,7 +90,7 @@ export default function Projects() {
                                     <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
                                     <motion.img
                                         src={project.image}
-                                        alt={project.title}
+                                        alt={`${project.title} project interface preview`}
                                         whileHover={{ scale: 1.1, x: 10, y: 5 }}
                                         transition={{ duration: 0.8 }}
                                         className="w-full h-full object-cover"
@@ -121,15 +121,17 @@ export default function Projects() {
                                             key={link.name}
                                             href={link.url}
                                             target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`Visit ${project.title} ${link.name}`}
                                             className="text-xs font-bold uppercase tracking-widest text-slate-200 hover:text-accent flex items-center gap-2 transition-colors"
                                         >
                                             {link.name}
-                                            <ExternalLink size={12} />
+                                            <ExternalLink size={12} aria-hidden="true" />
                                         </a>
                                     ))}
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.article>
                     ))}
                 </div>
             </div>

@@ -71,7 +71,7 @@ const Hero = () => {
                                 >
                                     <span className="text-accent text-[10px] font-bold uppercase tracking-widest leading-none">Senior Engineering</span>
                                 </motion.div>
-                                <motion.h1
+                                <h1
                                     className="text-7xl md:text-9xl font-serif text-white tracking-tight leading-[0.85]"
                                 >
                                     <span className="block overflow-hidden pb-4">
@@ -108,7 +108,7 @@ const Hero = () => {
                                             </motion.span>
                                         ))}
                                     </span>
-                                </motion.h1>
+                                </h1>
                             </div>
 
                             <motion.p
@@ -138,6 +138,7 @@ const Hero = () => {
                                     <div className="absolute inset-0 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/40 transition-colors" />
                                     <a
                                         href="#projects"
+                                        aria-label="View chronological list of projects"
                                         className="relative flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full border border-accent/30 bg-[#020617] group-hover:border-accent group-hover:scale-105 transition-all duration-500"
                                     >
                                         <div className="text-center">
