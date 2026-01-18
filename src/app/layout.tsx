@@ -18,6 +18,10 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Mukul Goel | Full-Stack & Mobile Engineer",
   description: "Bespoke digital experiences crafted with precision and speed.",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
