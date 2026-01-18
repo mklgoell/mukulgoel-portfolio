@@ -9,7 +9,7 @@ const projects = [
         description: "Automated payment recovery for the Indian SMB ecosystem. Transforming late fees into healthy cash flow through intelligent WhatsApp & Email orchestration and UPI deep-linking.",
         tags: ["SaaS", "UPI Integration", "WhatsApp API", "Automation"],
         links: [],
-        image: "/moviq.png",
+        image: "/mukulgoel-portfolio/moviq.png",
         color: "bg-orange-500/10",
         text: "text-orange-400",
         meta: { status: "PRODUCTION", runtime: "NODE.JS", auth: "WHATSAPP_API" }
@@ -19,7 +19,7 @@ const projects = [
         description: "The world's smartest Payment Routing Platform. An intelligent 'Omni Portal' engine connecting high-growth businesses to 500+ local methods across 190+ markets with 99.99% uptime.",
         tags: ["Smart Routing", "Omni Engine", "Fintech", "High-Availability"],
         links: [{ name: "Live Site", url: "https://kiwipayment.com" }],
-        image: "/kiwipay.png",
+        image: "/mukulgoel-portfolio/kiwipay.png",
         color: "bg-emerald-500/10",
         text: "text-emerald-400",
         meta: { status: "SCALING", engine: "OMNI_ROUTING", uptime: "99.99%" }
@@ -29,7 +29,7 @@ const projects = [
         description: "A decentralized P2P streaming protocol empowering creators with 100% earnings. Built on a censorship-resistant mesh network with instant stablecoin settlements and non-custodial ownership.",
         tags: ["P2P Mesh", "WebRTC", "Creator Economy", "Stablecoin Settlement"],
         links: [{ name: "Live Site", url: "https://lumestream.io" }],
-        image: "/lumestream.png",
+        image: "/mukulgoel-portfolio/lumestream.png",
         color: "bg-blue-500/10",
         text: "text-blue-400",
         meta: { status: "BETA", p2p: "WEBRTC_MESH", settlement: "USDC" }
@@ -39,7 +39,7 @@ const projects = [
         description: "Enterprise-grade crypto payments & autopay infrastructure. Architecting Stripe-like subscription protocols without banks or borders—featuring non-custodial treasury sweeps and institutional controls.",
         tags: ["Autopay", "Treasury Controls", "Non-custodial", "Web3 Infra"],
         links: [{ name: "Live Site", url: "https://imetablockchain.com/" }],
-        image: "/imetablockchain.png",
+        image: "/mukulgoel-portfolio/imetablockchain.png",
         color: "bg-purple-500/10",
         text: "text-purple-400",
         meta: { status: "ENTERPRISE", infra: "NON-CUSTODIAL", security: "AUDIT_READY" }
