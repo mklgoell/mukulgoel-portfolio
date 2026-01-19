@@ -14,7 +14,7 @@ export default function Home() {
   const magneticButtonY = useMotionValue(0);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('mukulgoel1998@outlook.com');
+    navigator.clipboard.writeText('mukul@mukulgoel.dev');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -126,7 +126,7 @@ export default function Home() {
                 className="relative"
               >
                 <a
-                  href="mailto:mukulgoel1998@outlook.com"
+                  href="mailto:mukul@mukulgoel.dev"
                   className="group relative inline-flex px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-sm overflow-hidden"
                 >
                   <div className="relative z-10 flex items-center gap-2">
@@ -139,7 +139,7 @@ export default function Home() {
                 onClick={handleCopy}
                 className={`transition-all duration-500 uppercase tracking-[0.2em] text-xs font-bold pt-5 ${copied ? 'text-accent' : 'text-slate-500 hover:text-white'}`}
               >
-                {copied ? '✓ Email Copied to Clipboard' : 'Copy Email — mukulgoel1998@outlook.com'}
+                {copied ? '✓ Email Copied to Clipboard' : 'Copy Email — mukul@mukulgoel.dev'}
               </button>
             </div>
           </div>
