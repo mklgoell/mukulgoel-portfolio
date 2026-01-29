@@ -151,8 +151,8 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-8">
-              <a href="https://linkedin.com/in/mukul--goel/" target="_blank" className="text-slate-400 hover:text-white transition-all hover:scale-110">LinkedIn</a>
-              <a href="https://github.com/mklgoell" target="_blank" className="text-slate-400 hover:text-white transition-all hover:scale-110">GitHub</a>
+              <a href="https://linkedin.com/in/mukul--goel/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-all hover:scale-110">LinkedIn</a>
+              <a href="https://github.com/mklgoell" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-all hover:scale-110">GitHub</a>
             </div>
           </div>
         </div>

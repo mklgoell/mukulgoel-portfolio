@@ -16,7 +16,8 @@ export default function Navbar() {
             <div className="flex items-center justify-between pointer-events-none">
                 <Magnetic>
                     <motion.a
-                        href="#"
+                        href="/"
+                        aria-label="Home"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         className="text-white font-serif italic text-2xl pointer-events-auto"

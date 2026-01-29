@@ -27,6 +27,18 @@ export default function StructuredData() {
             "Automated Payment Recovery",
             "Smart Routing Engines"
         ],
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "ITM University, Gwalior",
+                "sameAs": "https://www.itmuniversity.ac.in/"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Makhanlal Chaturvedi University, Bhopal",
+                "sameAs": "https://www.mcu.ac.in/"
+            }
+        ],
         "description": "Mukul Goel is a Full-Stack and Mobile Engineer specializing in high-performance digital products, fintech rails, and decentralized protocols.",
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -76,10 +88,27 @@ export default function StructuredData() {
         ]
     };
 
+    const websiteData = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mukul Goel Portfolio",
+        "url": "https://mukulgoel.dev",
+        "author": {
+            "@type": "Person",
+            "name": "Mukul Goel"
+        }
+    };
+
     return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
+            />
+        </>
     );
 }

@@ -18,8 +18,9 @@ export default function NotFound() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
+                    className="relative"
                 >
-                    <h1 className="text-8xl md:text-[12rem] font-serif italic text-white/10 select-none">404</h1>
+                    <h1 className="text-8xl md:text-[12rem] font-serif italic text-white/10 select-none leading-none">404</h1>
                     <div className="absolute inset-0 flex items-center justify-center">
                         <h2 className="text-2xl md:text-4xl font-serif text-white uppercase tracking-[0.2em]">
                             System <span className="text-accent italic">Failure</span>

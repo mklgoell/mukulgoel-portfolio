@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Outfit } from "next/font/google";
+import { Playfair_Display, Outfit } from "next/font/google"; // Fonts restored
+import Link from "next/link";
+import Preloader from "@/components/Preloader";
 import CustomCursor from "@/components/CustomCursor";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import Scanline from "@/components/Scanline";
 import StructuredData from "@/components/StructuredData";
+import { GoogleAnalytics } from "@next/third-parties/google"; // Analytics restored
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -87,6 +90,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${outfit.variable} font-sans bg-[#020617] text-[#f8fafc] antialiased relative`}
       >
+        <Preloader />
         <StructuredData />
         <CustomCursor />
         <BackgroundEffect />
@@ -94,6 +98,7 @@ export default function RootLayout({
         {/* Animated Grainy overlay */}
         <div className="noise-overlay" />
         {children}
+        <GoogleAnalytics gaId="G-RHNN6MHRDG" />
       </body>
     </html>
   );
