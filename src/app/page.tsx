@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import GithubContributions from "@/components/GithubContributions";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -110,6 +111,7 @@ export default function Home() {
       </section>
       <Skills />
       <Projects />
+      <GithubContributions />
 
       <footer className="py-32 border-t border-slate-900 bg-slate-950/50">
         <div className="container px-6 mx-auto">
